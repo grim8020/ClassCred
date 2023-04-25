@@ -15,10 +15,7 @@ class StartScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [kLightGreenishBlue, kGreenDarnerTrail],
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft),
+          gradient: mainBackgroundGradient,
         ),
         child: SafeArea(
           child: SingleChildScrollView(
@@ -26,14 +23,14 @@ class StartScreen extends StatelessWidget {
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 200.0),
+                  padding: const EdgeInsets.only(top: 150.0),
                   child: Text(
                     'ClassCred',
                     style: kLargeMainDisplayTextStyle,
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.1,
+                  height: MediaQuery.of(context).size.height * 0.05,
                 ),
                 const Padding(
                   padding: EdgeInsets.all(20.0),
@@ -45,8 +42,7 @@ class StartScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 40),
                       foregroundColor: kGreenlandGreen,
                       backgroundColor: kDullYellowColor),
-                  onPressed: () =>
-                      Navigator.popAndPushNamed(context, '/password'),
+                  onPressed: () => Navigator.pushNamed(context, '/password'),
                   child: const Text(
                     'Sign In',
                   ),
@@ -98,6 +94,21 @@ class StartScreen extends StatelessWidget {
                     SignInButton(
                       Buttons.Apple,
                       onPressed: () {},
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Don't have an account?"),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Register',
+                                style: TextStyle(color: kDullYellowColor),
+                              ))
+                        ],
+                      ),
                     ),
                   ],
                 )

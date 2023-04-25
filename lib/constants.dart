@@ -15,3 +15,8 @@ final kMediumDisplayTextStyle = GoogleFonts.frederickaTheGreat(
 
 final kSubheadingDisplayTextStyle =
     GoogleFonts.lalezar(fontSize: 15, color: kOffWhite);
+
+const mainBackgroundGradient = LinearGradient(
+    colors: [kLightGreenishBlue, kGreenDarnerTrail],
+    begin: Alignment.topRight,
+    end: Alignment.bottomLeft);
