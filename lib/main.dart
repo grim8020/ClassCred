@@ -1,5 +1,4 @@
 import 'package:class_cred/constants.dart';
-import 'package:class_cred/password_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'start_screen.dart';
@@ -32,7 +31,7 @@ class ClassCred extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const StartScreen(),
-        '/password': (context) => const PasswordScreen(),
+        // '/password': (context) => PasswordScreen(),
       },
     );
   }
