@@ -74,6 +74,15 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   //onChanged:
                 ),
               ),
+              ElevatedButton(
+                onPressed: () => Navigator.popAndPushNamed(context, '/home'),
+                child: Text('ENTER'),
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                    elevation: 5,
+                    backgroundColor: kDullYellowColor,
+                    foregroundColor: kGreenlandGreen),
+              ),
             ],
           ),
         ),

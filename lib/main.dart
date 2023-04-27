@@ -1,4 +1,6 @@
 import 'package:class_cred/constants.dart';
+import 'package:class_cred/home_screen.dart';
+import 'package:class_cred/password_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'start_screen.dart';
@@ -31,7 +33,8 @@ class ClassCred extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const StartScreen(),
-        // '/password': (context) => PasswordScreen(),
+        '/password': (context) => const PasswordScreen('email'),
+        '/home': (context) => const HomeScreen(),
       },
     );
   }

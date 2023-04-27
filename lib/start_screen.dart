@@ -1,6 +1,6 @@
 import 'package:class_cred/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'password_screen.dart';
 
@@ -38,18 +38,25 @@ class _StartScreenState extends State<StartScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                CircleAvatar(
+                  radius: MediaQuery.of(context).size.width * 0.3,
+                  backgroundImage: NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVwrBCEtTrk9v7pIpzomlInuMOT7DLGZYAGQ&usqp=CAU'),
+                ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 150.0),
+                  padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height * 0.05),
                   child: Text(
                     'ClassCred',
                     style: kLargeMainDisplayTextStyle,
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.05,
+                  height: MediaQuery.of(context).size.height * 0.020,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10),
                   child: Padding(
                     padding: EdgeInsets.all(20.0),
                     child: TextField(
@@ -92,7 +99,7 @@ class _StartScreenState extends State<StartScreen> {
                     );
                   },
                   child: const Text(
-                    'Sign In',
+                    'SIGN IN',
                   ),
                 ),
                 // SizedBox(
@@ -126,40 +133,73 @@ class _StartScreenState extends State<StartScreen> {
                     ),
                   ],
                 ),
-                //const LoadSpinner()
-                //Icon(Icons.cast_for_education),
                 Column(
-                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SignInButton(
-                      Buttons.Google,
-                      onPressed: () {},
-                    ),
-                    SignInButton(
-                      Buttons.Microsoft,
-                      onPressed: () {},
-                    ),
-                    SignInButton(
-                      Buttons.Apple,
-                      onPressed: () {},
-                    ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 0, horizontal: 50),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Text("Don't have an account?"),
-                          TextButton(
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: kOffWhite,
+                            ),
+                            child: IconButton(
+                              icon: const Icon(MdiIcons.google),
                               onPressed: () {},
-                              child: const Text(
-                                'Register',
-                                style: TextStyle(color: kDullYellowColor),
-                              ))
+                              color: kGreenlandGreen,
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: kOffWhite,
+                            ),
+                            child: IconButton(
+                              icon: const Icon(MdiIcons.apple),
+                              onPressed: () {},
+                              color: kGreenlandGreen,
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: kOffWhite,
+                            ),
+                            child: IconButton(
+                              icon: const Icon(MdiIcons.microsoft),
+                              onPressed: () {},
+                              color: kGreenlandGreen,
+                            ),
+                          ),
                         ],
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text("Don't have an account?"),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Register',
+                                    style: TextStyle(color: kDullYellowColor),
+                                  ))
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
