@@ -188,11 +188,15 @@ class _StartScreenState extends State<StartScreen> {
                             children: [
                               const Text("Don't have an account?"),
                               TextButton(
-                                  onPressed: () {},
-                                  child: const Text(
-                                    'Register',
-                                    style: TextStyle(color: kDullYellowColor),
-                                  ))
+                                onPressed: () {
+                                  Navigator.popAndPushNamed(
+                                      context, '/register');
+                                },
+                                child: const Text(
+                                  'Register',
+                                  style: TextStyle(color: kDullYellowColor),
+                                ),
+                              ),
                             ],
                           ),
                         )

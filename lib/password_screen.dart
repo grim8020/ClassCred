@@ -23,13 +23,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
 
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.pop(context),
-        mini: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        child: const Icon(Icons.arrow_back_ios),
-      ),
+      floatingActionButton: BackButton(),
       backgroundColor: kOffWhite,
       body: Container(
         width: double.infinity,
