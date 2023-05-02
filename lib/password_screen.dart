@@ -69,7 +69,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 ),
               ),
               ElevatedButton(
-                onPressed: () => Navigator.popAndPushNamed(context, '/home'),
+                onPressed: () =>
+                    Navigator.popAndPushNamed(context, '/bottomBar'),
                 child: Text('ENTER'),
                 style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 40),

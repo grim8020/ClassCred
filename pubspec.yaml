@@ -40,6 +40,7 @@ dependencies:
   flutter_signin_button: any
   material_design_icons_flutter: 6.0.7096
   persistent_bottom_nav_bar: any
+  convex_bottom_bar: ^3.2.0
 
 dev_dependencies:
   flutter_test:

@@ -1,8 +1,8 @@
 import 'package:class_cred/constants.dart';
+import 'package:class_cred/password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
-import 'password_screen.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -90,13 +90,16 @@ class _StartScreenState extends State<StartScreen> {
                       foregroundColor: kGreenlandGreen,
                       backgroundColor: kDullYellowColor),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            PasswordScreen(emailTextEditingController.text),
-                      ),
-                    );
+                    PersistentNavBarNavigator.pushNewScreen(context,
+                        screen: PasswordScreen(emailTextEditingController.text),
+                        withNavBar: false);
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) =>
+                    //         PasswordScreen(emailTextEditingController.text),
+                    //   ),
+                    // );
                   },
                   child: const Text(
                     'SIGN IN',

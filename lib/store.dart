@@ -14,6 +14,8 @@ class Store extends StatelessWidget {
       // ),
       backgroundColor: kOffWhite,
       body: Container(
+        color: kOffWhite,
+        height: double.infinity,
         child: SafeArea(
           child: Text('Store'),
         ),

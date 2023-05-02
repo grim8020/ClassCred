@@ -8,17 +8,18 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
-      // floatingActionButton: const BackButton(),
-      backgroundColor: kOffWhite,
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: mainBackgroundGradient,
-        ),
-        child: SafeArea(child: const Text('PROFILE')),
-      ),
-    );
+        // floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+        // floatingActionButton: const BackButton(),
+        backgroundColor: kOffWhite,
+        body: Stack(
+          children: [
+            Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [kLightGreenishBlue, kGreenDarnerTrail])),
+            )
+          ],
+        ));
   }
 }
