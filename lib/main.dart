@@ -10,9 +10,12 @@ import 'package:class_cred/start_screen.dart';
 import 'package:class_cred/store.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const ClassCred());
-}
+void main() => runApp(
+    // DevicePreview(
+    //   enabled: !kReleaseMode,
+    //   builder: (context) => ClassCred(), // Wrap your app
+    // ),
+    ClassCred());
 
 class ClassCred extends StatelessWidget {
   const ClassCred({super.key});
@@ -22,7 +25,6 @@ class ClassCred extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ClassCred',
-      //debugShowCheckedModeBanner: false,
       theme: ThemeData(
         inputDecorationTheme: const InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
@@ -36,7 +38,7 @@ class ClassCred extends StatelessWidget {
           ),
         ),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
       initialRoute: '/start',
       routes: {
         '/bottomBar': (context) => const ConvexBottomBar(),

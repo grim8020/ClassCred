@@ -31,6 +31,7 @@ class _ConvexBottomBarState extends State<ConvexBottomBar> {
       length: 5,
       initialIndex: 0,
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Column(
           children: const [
             Divider(),

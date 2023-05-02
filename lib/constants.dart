@@ -16,11 +16,17 @@ final kMediumDisplayTextStyle = GoogleFonts.frederickaTheGreat(
 final kSubheadingDisplayTextStyle =
     GoogleFonts.lalezar(fontSize: 15, color: kOffWhite);
 
+final kSubheadingDisplayLargeTextStyle =
+    GoogleFonts.lalezar(fontSize: 30, color: kOffWhite);
+
 final kSubheadingXLTextStyle =
     GoogleFonts.lalezar(fontSize: 50, color: kGreenlandGreen);
 
 final kSubheadingLargeTextStyle =
     GoogleFonts.lalezar(fontSize: 35, color: kGreenlandGreen);
+
+final kSubheadingMediumTextStyle =
+    GoogleFonts.lalezar(fontSize: 20, color: kGreenlandGreen);
 
 const mainBackgroundGradient = LinearGradient(
     colors: [kLightGreenishBlue, kGreenDarnerTrail],

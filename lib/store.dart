@@ -17,7 +17,14 @@ class Store extends StatelessWidget {
         color: kOffWhite,
         height: double.infinity,
         child: SafeArea(
-          child: Text('Store'),
+          child: Column(
+            children: [
+              Text('Avatar Store'),
+              Text(
+                'Spend XP points for avatar upgrades and skills',
+              ),
+            ],
+          ),
         ),
       ),
     );
