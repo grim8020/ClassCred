@@ -29,7 +29,7 @@ class BottomAppBarCustom extends StatelessWidget {
             TextButton.icon(
               onPressed: () => Navigator.pushNamed(context, '/quests'),
               icon: Column(
-                children: [
+                children: const [
                   Icon(
                     Icons.list,
                     size: 40,
@@ -37,12 +37,12 @@ class BottomAppBarCustom extends StatelessWidget {
                   Text('QUESTS')
                 ],
               ),
-              label: Text(''),
+              label: const Text(''),
             ),
             TextButton.icon(
               onPressed: () => Navigator.pushNamed(context, '/store'),
               icon: Column(
-                children: [
+                children: const [
                   Icon(
                     Icons.store,
                     size: 40,
@@ -50,12 +50,12 @@ class BottomAppBarCustom extends StatelessWidget {
                   Text('STORE')
                 ],
               ),
-              label: Text(''),
+              label: const Text(''),
             ),
             TextButton.icon(
               onPressed: () => Navigator.pushNamed(context, '/home'),
               icon: Column(
-                children: [
+                children: const [
                   Icon(
                     Icons.home,
                     size: 40,
@@ -63,12 +63,12 @@ class BottomAppBarCustom extends StatelessWidget {
                   Text('HOME')
                 ],
               ),
-              label: Text(''),
+              label: const Text(''),
             ),
             TextButton.icon(
               onPressed: () => Navigator.pushNamed(context, '/home'),
               icon: Column(
-                children: [
+                children: const [
                   Icon(
                     Icons.home,
                     size: 40,
@@ -76,7 +76,7 @@ class BottomAppBarCustom extends StatelessWidget {
                   Text('HOME')
                 ],
               ),
-              label: Text(''),
+              label: const Text(''),
             ),
           ],
         ),

@@ -25,11 +25,7 @@ class Profile extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Positioned(
-                      top: 10,
-                      left: 30,
-                      child: Icon(Icons.edit),
-                    ),
+                    child: Icon(Icons.edit),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -79,7 +75,7 @@ class Profile extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container()
+                  //Container()
                 ],
               ),
             ],

@@ -19,9 +19,15 @@ class Store extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Text('Avatar Store'),
-              Text(
+              const Text('Avatar Store'),
+              const Text(
                 'Spend XP points for avatar upgrades and skills',
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [Container()],
+                ),
               ),
             ],
           ),
